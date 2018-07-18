@@ -177,14 +177,17 @@ public class Crud extends StringConversion {
 	// this helps while retrieving and updating the data from the Hashmap
 	String anyCase(String s) {
 		char[] c = s.toCharArray();
+		for(int i =0; i < s.length(); i++) {
+			c[i] = Character.toLowerCase(c[i]);
+		}
 		c[0] = Character.toUpperCase(s.charAt(0));
-		for (int i = 0; i < s.length(); i++) {
+		for (int i = 1; i < s.length(); i++) {
 			if (c[i] == ' ') {
 				c[i + 1] = Character.toUpperCase(c[i + 1]);
 			}
 		}
-		String modified = String.valueOf(c);
-		return modified;
+		return String.valueOf(c);
+		
 
 	}
 
