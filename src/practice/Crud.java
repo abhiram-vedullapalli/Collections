@@ -166,7 +166,6 @@ public class Crud extends StringConversion {
 		System.out.println("\n DETAILS OF ALL PLAYERS \n");
 		for (HashMap.Entry<String, Details> entry : players.entrySet()) {
 			System.out.println(entry.getValue());
-
 		}
 	}
 
